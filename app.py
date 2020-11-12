@@ -75,7 +75,7 @@ def create_app(config_name):
         password = request.form['password']
 
         result = user.login(email, password)
-
+ 
         if result:
             if result.role == 4:
                 return render_template('login.html', data={'status': 401, 'msg': 'Seu usuário '
